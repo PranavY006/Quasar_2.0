@@ -253,5 +253,43 @@ function read_more() {
   }
 }
 
+//Analysis Q1
 
+function animateNumbers(targetId, initialValue, finalValue, duration) {
+  let current = initialValue;
+  const increment = (finalValue - initialValue) / duration;
+  const targetElement = document.getElementById(targetId);
 
+  function updateNumber() {
+      current += increment;
+      targetElement.textContent = `+${Math.round(current)}`;
+
+      if (current < finalValue) {
+          requestAnimationFrame(updateNumber);
+      }
+  }
+
+  updateNumber();
+}
+
+function startAnimationOnScroll() {
+  const analyticsSection = document.getElementById('analytics-section');
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              animateNumbers('registrations', 0, 1000, 200);
+              animateNumbers('teams', 0, 333, 200);
+              animateNumbers('colleges', 0, 65, 200);
+              animateNumbers('cities', 0, 20, 200);
+              animateNumbers('states', 0, 10, 200);
+              observer.disconnect();
+          }
+      });
+  });
+
+  observer.observe(analyticsSection);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  startAnimationOnScroll();
+});

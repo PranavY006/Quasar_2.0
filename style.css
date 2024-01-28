@@ -1156,6 +1156,27 @@ footer {
   margin-top: 1rem;
 }
 
+/* analysis Section */
+
+.analytics-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.analytics-item {
+    flex: 1;
+    margin: 10px;
+}
+
+.analytics-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 @keyframes fade {
   from {
     opacity: 1;
