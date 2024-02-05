@@ -236,6 +236,8 @@ window.onload = function () {
   }, 1500);
 };
 
+window.onload();
+
 // Read More
 function read_more() {
   var dots = document.getElementById("dots");
@@ -277,11 +279,11 @@ function startAnimationOnScroll() {
   const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
           if (entry.isIntersecting) {
-              animateNumbers('registrations', 0, 1000, 200);
-              animateNumbers('teams', 0, 333, 200);
-              animateNumbers('colleges', 0, 65, 200);
-              animateNumbers('cities', 0, 20, 200);
-              animateNumbers('states', 0, 10, 200);
+              animateNumbers('registrations', 0, 1000, 100);
+              animateNumbers('teams', 0, 333, 100);
+              animateNumbers('colleges', 0, 65, 100);
+              animateNumbers('cities', 0, 20, 100);
+              animateNumbers('states', 0, 10, 100);
               observer.disconnect();
           }
       });
