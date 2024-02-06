@@ -264,7 +264,7 @@ function animateNumbers(targetId, initialValue, finalValue, duration) {
 
   function updateNumber() {
       current += increment;
-      targetElement.textContent = `+${Math.round(current)}`;
+      targetElement.textContent = `${Math.round(current)}+`;
 
       if (current < finalValue) {
           requestAnimationFrame(updateNumber);
