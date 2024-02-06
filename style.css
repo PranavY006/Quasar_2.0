@@ -543,6 +543,8 @@ content>p {
 
 .event-item>img {
     box-shadow: 10px 10px 21px solid var(--pumpkin);
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .sub {
@@ -1158,6 +1160,7 @@ footer {
 
 /* analysis Section */
 
+/* Default styles for larger screens */
 .analytics-section {
     display: flex;
     justify-content: space-around;
@@ -1177,6 +1180,19 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Media query for smaller screens, adjust values as needed */
+@media (max-width: 768px) {
+    .analytics-section {
+        flex-direction: column;
+    }
+
+    .analytics-item { 
+        flex: 1;
+        margin: 10px 0;
+    }
+}
+
+
 @keyframes fade {
   from {
     opacity: 1;
@@ -1194,3 +1210,4 @@ footer {
     opacity: 1;
   }
 }
+
