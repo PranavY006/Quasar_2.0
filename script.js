@@ -223,7 +223,7 @@ window.onload = function () {
   setTimeout(function () {
     // animations
     document.getElementById("block1").style =
-      "animation:fade 1500ms ease-in-out;";
+      "animation:fade 3000ms ease-in-out;";
 
     document.getElementById("block2").style =
       "animation:fade1 1500ms ease-in-out ;animation-delay:1000ms";
